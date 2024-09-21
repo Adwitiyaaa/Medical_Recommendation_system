@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocFit - Your Personalized Health Companion</title>
+    <link rel="icon" href="main.png" type="image/png"> <!-- Add this line to include the favicon -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #e9f7df; /* Light Olive background */
+            background-image: url('static/back.jpeg');
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+        }
+
+        /* Full height background setup */
+        .container {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px; /* Reduced size of DocFit text */
+            color: #556b2f; /* Deep Olive for branding */
+            margin: 0;
+        }
+
+        .logo img {
+            max-height: 45px; /* Slightly increased height of the image */
+            margin-right: 5px; /* Reduced distance between the image and text */
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-text {
+            max-width: 600px;
+            /* Add animation */
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+            color: #333;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 30px;
+        }
+
+        /* Highlighted text styling */
+        .hero-text span.highlight {
+            font-style: italic;
+            font-weight: bold;
+            color: #2e8b57; /* Highlight color - SeaGreen */
+        }
+
+        .hero-text span.emphasis {
+            font-style: normal;
+            color: #8b0000; /* Highlight color - DarkRed */
+            font-family: 'Georgia', serif;
+        }
+
+        .cta-btn {
+            background-color: #556b2f; /* Deep Olive */
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #3c5121; /* Darker Deep Olive on hover */
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            border-radius: 15px;
+            /* Add animation */
+            animation: slideInUp 1s ease-out forwards;
+        }
+
+        /* Animation keyframes for text (bottom to top) */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px); /* Start 50px below */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+
+        /* Animation keyframes for image (bottom to top) */
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px); /* Start 50px below */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='main.png') }}" alt="DocFit Logo">
+        <h1>DocFit</h1>
+    </div>
+</header>
+
+<div class="container">
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>Achieve Your Health Goals with DocFit</h1>
+            <p>
+                DocFit is your all-in-one health and fitness companion, offering <span class="highlight">personalized diet plans</span>, workout routines, and <span class="emphasis">real-time doctor support</span> tailored to your needs.
+                Take control of your health today and start your <span class="highlight">transformation</span> with us!
+            </p>
+
+            <button onclick="window.location.href='join.html'" class="cta-btn">Join Now</button>
+
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='doctor.png') }}" alt="Health and Fitness">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

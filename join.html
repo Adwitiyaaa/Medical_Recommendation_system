@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Recommendation & Virtual Doctor</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5dc; /* Beige background color */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      animation: backgroundColorChange 10s infinite alternate;
+    }
+    a{
+      color: darkolivegreen;
+      font-size: 24px
+    }
+
+    @keyframes backgroundColorChange {
+      0% { background-color: #f5f5dc; }
+      100% { background-color: #fffacd; /* Lemon chiffon color */ }
+    }
+
+    header {
+      background-color:  #f5f5dc;
+      padding: 15px 20px;
+      text-align: center;
+      color: #556b2f;
+      font-size: 1.5rem;
+      font-weight: bold;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: #fdf5e6;
+      text-align: center;
+      flex: 1;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #556b2f;
+      margin-bottom: 20px;
+      animation: slideInLeft 1s ease-in-out;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      animation: slideInRight 1s ease-in-out;
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .features-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      flex-direction: column;
+      text-align: center;
+      background-color: #fdf5e6;
+      margin-top: 0;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feature-item img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .feature-item h3 {
+      font-size: 1.5rem;
+      color: #556b2f;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #f5f5dc;
+      padding: 10px 0;
+      text-align: center;
+      color: #556b2f;
+      font-size: 0.9rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Mobile Responsive Design */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .feature-item img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .feature-item h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Diet & Fitness
+  </header>
+
+  <section class="hero-section">
+    <h1>Welcome to Our Health Platform</h1>
+    <p>Connect with a virtual doctor for expert advice, ensuring you stay healthy and happy. Access tailored wellness tips, monitor your progress, and make informed decisions to support your overall well-being.</p>
+  </section>
+
+  <section class="features-section">
+    <div class="feature-item">
+      <a href="virtual-doctor.html">
+        <img src="https://img.icons8.com/fluency/96/medical-doctor.png" alt="Virtual Doctor">
+
+<!--            <button onclick="window.location.href='index.html'">virtual Doctor</button>-->
+          <a  href="/index">Virtual Doctor</a>
+
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Health & Wellness Platform. All rights reserved.</p>
+  </footer>
+</body>
+</html>
